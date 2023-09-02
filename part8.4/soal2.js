@@ -9,7 +9,7 @@ function angkaPalindrome(num) {
   // you can only write your code here!
   while (true) {
     num++;
-    let angka = num.toString();
+    let strNum = num.toString();
     let temp = '';
     for (let i = strNum.length - 1; i >= 0; i--) {
       temp += strNum[i]
