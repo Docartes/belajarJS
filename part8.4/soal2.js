@@ -10,19 +10,13 @@ function angkaPalindrome(num) {
   while (true) {
     num++;
     let angka = num.toString();
-    let left = 0;
-    let right = angka.length - 1;
-
-    while (left < right) {
-      if (angka[left] !== angka[right]) {
-        break;
-      }
-      left += 1;
-      right -= 1;
+    let temp = '';
+    for (let i = strNum.length - 1; i >= 0; i--) {
+      temp += strNum[i]
     }
 
-    if (left == right) {
-      return num;
+    if (parseInt(temp) == num) {
+      return num
     }
   }
 }
