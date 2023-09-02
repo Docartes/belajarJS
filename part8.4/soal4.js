@@ -10,7 +10,7 @@ function pasanganTerbesar(num) {
     }
   }
 
-  return temp;
+  return terbesar;
 }
 
 // TEST CASES
