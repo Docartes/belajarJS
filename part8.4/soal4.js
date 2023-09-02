@@ -3,7 +3,7 @@ function pasanganTerbesar(num) {
   let strNum = num.toString();
   let terbesar = 0;
 
-  for (let i = 0; i < str.length - 1; i++) {
+  for (let i = 0; i < strNum.length - 1; i++) {
     const pasangan = parseInt(strNum[i] + strNum[i + 1]);
     if (pasangan > terbesar) {
       terbesar = pasangan;
