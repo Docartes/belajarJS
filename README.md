@@ -1,5 +1,5 @@
 # Belajar Algoritma Pemrograman dengan JavaScript
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="Nama Gambar" style="width:200px;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="Nama Gambar" style="width:300px;">
 
 
 Selamat datang di repositori ini! Repo ini dibuat untuk dokumentasi dan berbagi pengetahuan tentang belajar algoritma pemrograman menggunakan bahasa JavaScript.
