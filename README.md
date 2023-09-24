@@ -5,7 +5,7 @@
 Selamat datang di repositori ini! Repo ini dibuat untuk dokumentasi dan berbagi pengetahuan tentang belajar algoritma pemrograman menggunakan bahasa JavaScript.
 
 
-## Tentang Kami
+## Tentang Saya
 
 Saya adalah pemula di dunia pemrograman. Saya sedang berusaha untuk memahami konsep-konsep dasar algoritma dan menerapkannya dengan menggunakan bahasa pemrograman JavaScript. Tujuan saya adalah untuk memperdalam pemahaman dan berbagi pembelajaran dengan komunitas.
 
