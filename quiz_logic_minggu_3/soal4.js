@@ -22,7 +22,6 @@ Output yang diharapkan berupa Object dengan format sebagai berikut:
 function graduates (students) {
   // Code disini
   let result = {};
-  let arr = [];
 
   for ( let i = 0; i < students.length; i++ ) {
     if ( result[students[i].class] == undefined ) {
