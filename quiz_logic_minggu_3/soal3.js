@@ -4,9 +4,15 @@ function highestScore (students) {
   let result = {};
   for ( let i = 0; i < students.length; i++ ) {
     if ( result[students[i].class] == undefined ) {
-      result[students[i].class] = students[i]
+      result[students[i].class] = {
+        name: students[i].name,
+        score: students[i].score
+      }
     } else if ( result[students[i].class].score < students[i].score ) {
-      result[students[i].class] = students[i]
+      result[students[i].class] = {
+        name: students[i].name,
+        score: students[i].score
+      }
     }
   }
 
