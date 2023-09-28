@@ -1,10 +1,10 @@
 function highestScore (students) {
   // Code disini
-
   let result = {};
   
 
   for ( let i = 0; i < students.length; i++ ) {
+<<<<<<< HEAD
     for ( let key in students[i] ) {
       if ( students[i].class == 'foxes' ) {
         let nilai = [];
@@ -40,6 +40,18 @@ function highestScore (students) {
           score: students[i].score,
         }
       } 
+=======
+    if ( result[students[i].class] == undefined ) {
+      result[students[i].class] = {
+        name: students[i].name,
+        score: students[i].score
+      }
+    } else if ( result[students[i].class].score < students[i].score ) {
+      result[students[i].class] = {
+        name: students[i].name,
+        score: students[i].score
+      }
+>>>>>>> 23a15c2 (static to dynamic)
     }
   }
   return result;
