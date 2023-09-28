@@ -21,74 +21,21 @@ Output yang diharapkan berupa Object dengan format sebagai berikut:
 
 function graduates (students) {
   // Code disini
-
-
   let result = {};
-  let nilaiFoxes = [];
-  let namaFoxes = [];
-
-  let nilaiWolves = []; 
-  let namaWolves = [];
-
-  let nilaiTigers = [];
-  let namaTigers = [];
+  let arr = [];
 
   for ( let i = 0; i < students.length; i++ ) {
-    if ( students[i].score > 75 && students[i].class == 'foxes' ) {
-      nilaiFoxes.push(students[i].score)
-      namaFoxes.push(students[i].name)
-      let lulus = [];
-      for ( let j = 0; j < nilaiFoxes.length; j++ ) {
-        let obj = {
-          name: namaFoxes[j],
-          score: nilaiFoxes[j]
-        }
-
-        lulus.push(obj)
-        
-      }
-      result.foxes = lulus;
+    if ( result[students[i].class] == undefined ) {
+      result[students[i].class] = []
     }
 
-
-    if ( students[i].score > 75 && students[i].class == 'wolves' ) {
-      nilaiWolves.push(students[i].score)
-      namaWolves.push(students[i].name)
-      let lulus = [];
-      for ( let j = 0; j < nilaiWolves.length; j++ ) {
-        let obj = {
-          name: namaWolves[j],
-          score: nilaiWolves[j]
-        }
-
-        lulus.push(obj)
-        
-      }
-      result.wolves = lulus;
-    }
-
-    if ( students[i].score > 75 && students[i].class == 'tigers' ) {
-      nilaiTigers.push(students[i].score)
-      namaTigers.push(students[i].name)
-      let lulus = [];
-      for ( let j = 0; j < nilaiTigers.length; j++ ) {
-        let obj = {
-          name: namaTigers[j],
-          score: nilaiTigers[j]
-        }
-
-        lulus.push(obj)
-        
-      }
-      result.tigers = lulus;
+    if ( students[i].score > 75 ) {
+      result[students[i].class].push({
+        name: students[i].name,
+        score: students[i].score
+      })
     }
   }
-
-
-
-  // console.log(nama)
-
-
   return result
 }
 
