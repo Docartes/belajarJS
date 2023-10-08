@@ -4,11 +4,9 @@ fungsi ini akan me-return array 2 dimensi
 */
 function groupAnimals(animals) {
   // you can only write your code here!
-
-  let sort = animals.sort();
   const groups = {};
 
-  for (const animal of sort) {
+  for (const animal of animals) {
     const firstLetter = animal[0];
     if (!groups[firstLetter]) {
       groups[firstLetter] = [animal];
@@ -17,9 +15,9 @@ function groupAnimals(animals) {
     }
   }
 
-  const result = Object.values(groups).map(group => group.sort());
+  const result = Object.values(groups).map(group => group);
 
-  return result;
+  return result.sort();
 }
 
 // TEST CASES
