@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manjari&family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+
+	<title>To-Do List</title>
+
+	<style>
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			min-height: 100vh;
+			background-color: #352F44
+		}
+
+		.app {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			background-color: #FAF0E6;
+			width: 500px;
+			height: 100%;
+			padding: 20px 40px;
+			border-radius: 10px
+		}
+
+		.app h2 {
+			margin-bottom: 10px;
+			font-family: 'Poppins';
+			text-align: center;
+		}
+
+		.app .row {
+			display: flex;
+			justify-content: space-between;
+			background: #B9B4C7;
+			width: 100%;
+			margin-left: 10px;
+			border-radius: 20px;
+		}
+
+		.app .row input {
+			padding: 15px;
+			font-family: 'Manjari', sans-serif;
+			border: none;
+			outline: none;
+			background: transparent;
+			font-weight: 700;
+			font-size: 14px;
+		}
+
+		.app .row #btn {
+			font-size: 16px;
+			color: #93B1A6;
+			font-family: 'Manjari';
+			background: #183D3D;
+			border: none;
+			outline: none;
+			padding: 10px;
+			width: 100px;
+			border-radius: 20px 0 0 20px;
+			cursor: pointer;
+		}
+
+		.app .row #search-btn {
+			font-size: 16px;
+			color: #93B1A6;
+			font-family: 'Manjari';
+			background: #183D3D;
+			border: none;
+			outline: none;
+			padding: 10px;
+			width: 100px;
+			border-radius: 0 20px 20px 0;
+			cursor: pointer;
+			margin-left: 5px
+		}
+
+		.app .list {
+			margin: 20px 35px 5px;
+		}
+
+		.app .list li {
+			list-style: none;
+			font-family: 'Manjari';
+			margin: 10px;
+			cursor: pointer;
+			user-select: none;
+			position: relative;
+			font-size: 15px;
+			padding-bottom: 2px;
+		}
+
+		ul li::before {
+			content: '';
+			position: absolute;
+			height: 20px;
+			width: 20px;
+			background-image: url(img/square.png);
+			background-size: cover;
+			background-position: center;
+			left: -28px;
+			line-height: 20px;
+			top: -3px;
+		}
+
+		ul li.checked::before {
+			height: 20px;
+			width: 20px;
+			background-image: url(img/check.png);
+		}
+
+		ul li.checked {
+			text-decoration: line-through;
+		}
+
+		ul li span {
+			position: absolute;
+			text-align: center;
+			top: -6px;
+			right: -20px;
+			height: 35px;
+			width: 35px;
+			line-height: 35px;
+			font-size: 25px;
+			border-radius: 50%;
+		}
+
+		ul li span:hover {
+			background-color: #B0A4A4;
+			cursor: pointer;
+			user-select: none;
+		}
+
+	</style>
+
+</head>
+<body>
+	
+
+	<div class="container">
+		<div class="app">
+			<h2>To-Do List</h2>
+			<div class="row">
+				<input type="text" id="input-box" placeholder="Input Task">
+				<button id='btn' onclick="addTask()">Add</button>
+				<button id="search-btn" onclick="search()">Search</button>
+			</div>
+			<ul class="list" id="list-task">
+					<!-- <li>Item 1</li>
+					<li>Item 2</li>
+					<li>Item 3</li> -->
+				</ul>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+
+
+</body>
+</html>
